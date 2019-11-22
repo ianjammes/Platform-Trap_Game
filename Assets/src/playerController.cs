@@ -22,6 +22,9 @@ public class playerController : MonoBehaviour
     private bool isJumping;
 
     private bool isPressed;
+
+    static bool collided;
+
     // Start is called before the first frame update
     void Start()
     {
