@@ -88,9 +88,6 @@ public class playerController : MonoBehaviour
                 jumpTimeCounter = jumpTime;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
-
-
-
             transform.parent = other.transform; //player moving along with the platform
         }
     }

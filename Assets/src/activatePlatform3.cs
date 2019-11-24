@@ -11,7 +11,7 @@ public class activatePlatform3 : MonoBehaviour
     {
         if (other.gameObject.tag == ("Player"))
         {
-            StartCoroutine(wait());
+            //StartCoroutine(wait());
             myAnim.SetBool("playPlatform3", true);
         }
     }

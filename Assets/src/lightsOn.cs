@@ -5,7 +5,7 @@ using UnityEngine;
 public class lightsOn : MonoBehaviour
 {
 
-    public Camera camera;
+    public Camera cam;
     public GameObject cube;
     public GameObject player;
     //int oldMask;
@@ -20,7 +20,7 @@ public class lightsOn : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            camera.cullingMask = -1;
+            cam.cullingMask = -1;
         }
     }
 }
