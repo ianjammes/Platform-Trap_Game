@@ -34,7 +34,7 @@ public class playerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        move = Input.GetAxis("Horizontal"); //for using it with the computer keyboard
+        //move = Input.GetAxis("Horizontal"); //for using it with the computer keyboard
 
         anim.SetFloat("speed", Mathf.Abs(move));
 
@@ -57,8 +57,9 @@ public class playerController : MonoBehaviour
         }
 
         //Setting diferent levels of jumping, tjhe more you hold the more you jump
-        if (/*isPressed*/Input.GetKey(KeyCode.Space) && isJumping == true)
-        {
+        //if (Input.GetKey(KeyCode.Space) && isJumping == true) //desktop
+        if (isPressed && isJumping == true) //mobile
+            {
             if (jumpTimeCounter > 0)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -70,8 +71,9 @@ public class playerController : MonoBehaviour
             }
         }
 
-        if (/*isPressed == false*/Input.GetKeyUp(KeyCode.Space))
-        {
+        //if (Input.GetKeyUp(KeyCode.Space)) //desktop
+        if (isPressed == false) //mobile
+            {
             isJumping = false;
         }
     }
@@ -82,7 +84,8 @@ public class playerController : MonoBehaviour
         if (other.gameObject.tag == "Ground") //checking if we're touching the ground
         {
             //allowing it to jump
-            if (/*isPressed*/Input.GetKeyDown(KeyCode.Space))
+            //if (Input.GetKeyDown(KeyCode.Space)) //desktop
+            if (isPressed) //mobile
             {
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
