@@ -62,7 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\src\activatePlatform3.cs" />
+    <Compile Include="Assets\src\activeSlippery.cs" />
     <Compile Include="Assets\src\bananaScript.cs" />
     <Compile Include="Assets\src\deathController.cs" />
     <Compile Include="Assets\src\detectPlayerOnRock.cs" />
@@ -72,6 +78,7 @@
     <Compile Include="Assets\src\lightController.cs" />
     <Compile Include="Assets\src\lightsOn.cs" />
     <Compile Include="Assets\src\playerController.cs" />
+    <Compile Include="Assets\src\rotationPlatform.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/ianja/Desktop/Courses/Git repo/Platform-Trap_Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
