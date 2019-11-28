@@ -1,8 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - FixedJoystick
+    - DynamicJoystick
     - activatePlatform3
+    - activeSlippery
     - bananaScript
     - deathController
     - detectPlayerOnRock
@@ -12,6 +13,7 @@ ScriptsOnlyBuild:
     - lightController
     - lightsOn
     - playerController
+    - rotationPlatform
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineConfiner
@@ -68,53 +70,57 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9392}
-    - Class: 114
-      Script: {instanceID: 9674}
+      Script: {instanceID: 9394}
     - Class: 114
       Script: {instanceID: 9676}
     - Class: 114
-      Script: {instanceID: 9682}
+      Script: {instanceID: 9678}
     - Class: 114
       Script: {instanceID: 9684}
     - Class: 114
-      Script: {instanceID: 9688}
+      Script: {instanceID: 9686}
     - Class: 114
-      Script: {instanceID: 9696}
+      Script: {instanceID: 9690}
     - Class: 114
-      Script: {instanceID: 9732}
+      Script: {instanceID: 9698}
     - Class: 114
       Script: {instanceID: 9734}
     - Class: 114
-      Script: {instanceID: 9786}
+      Script: {instanceID: 9736}
     - Class: 114
-      Script: {instanceID: 10296}
+      Script: {instanceID: 9788}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 9962}
     - Class: 114
-      Script: {instanceID: 10750}
+      Script: {instanceID: 10302}
     - Class: 114
-      Script: {instanceID: 10806}
+      Script: {instanceID: 10378}
     - Class: 114
-      Script: {instanceID: 10862}
+      Script: {instanceID: 10748}
     - Class: 114
-      Script: {instanceID: 11124}
+      Script: {instanceID: 10760}
     - Class: 114
-      Script: {instanceID: 11196}
+      Script: {instanceID: 10816}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 10874}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11934}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11956}
+      Script: {instanceID: 11258}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11280}
     - Class: 114
-      Script: {instanceID: 14800}
+      Script: {instanceID: 11950}
+    - Class: 114
+      Script: {instanceID: 11954}
+    - Class: 114
+      Script: {instanceID: 11976}
+    - Class: 114
+      Script: {instanceID: 12010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -140,6 +146,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessLayer
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Joystick
   - hash:
       serializedVersion: 2
       Hash: d69d8947507c5d18184463bbf23dc55e
@@ -664,6 +676,12 @@ ScriptsOnlyBuild:
     className: PostProcessProfile
   - hash:
       serializedVersion: 2
+      Hash: 7c548ef45d4002eb077c01d2d3f3e5ea
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rotationPlatform
+  - hash:
+      serializedVersion: 2
       Hash: 7f94fa9762524c26e64e8a5afd194a0d
     assemblyName: Cinemachine.dll
     namespaceName: 
@@ -790,6 +808,12 @@ ScriptsOnlyBuild:
     className: LightweightRenderPipelineAsset
   - hash:
       serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FloatingJoystick
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -850,6 +874,12 @@ ScriptsOnlyBuild:
     className: CinemachineTrackedDolly
   - hash:
       serializedVersion: 2
+      Hash: 395a71f97926360ae4f61d11cf1ee7eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: activeSlippery
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -868,7 +898,7 @@ ScriptsOnlyBuild:
     className: CinemachinePath
   - hash:
       serializedVersion: 2
-      Hash: 27e7e30848882699db41e4bf5cfa78c8
+      Hash: da75360bf1315c6ffde4397d0b893a5e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerController
@@ -982,6 +1012,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 824e8d4cb47ffd88ddf959dbd4526585
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DynamicJoystick
+  - hash:
+      serializedVersion: 2
       Hash: 1e3d6222ff533d213aab144eb854a53b
     assemblyName: Cinemachine.dll
     namespaceName: 
@@ -1034,6 +1070,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering
     className: VolumeComponent
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FixedJoystick
   - hash:
       serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
@@ -1180,6 +1222,12 @@ ScriptsOnlyBuild:
     className: CinemachineHardLockToTarget
   - hash:
       serializedVersion: 2
+      Hash: 9dac16f3efc511835ac976dfae55f580
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VariableJoystick
+  - hash:
+      serializedVersion: 2
       Hash: 559fcf4176d5f806e699179b09f72edd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1208,36 +1256,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ce669872a2be11bc686ea22961d8a3bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Joystick
-  - hash:
-      serializedVersion: 2
-      Hash: ce669872a2be11bc686ea22961d8a3bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FloatingJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: 824e8d4cb47ffd88ddf959dbd4526585
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: DynamicJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: ce669872a2be11bc686ea22961d8a3bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FixedJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: 9dac16f3efc511835ac976dfae55f580
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VariableJoystick
   platform: 9
   scenePathNames:
   - Assets/Scenes/ImpossibleGame.unity

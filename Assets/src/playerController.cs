@@ -36,7 +36,7 @@ public class playerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        maxSpeed = 15.0f;
+        maxSpeed = 16.0f;
 
 }
 
@@ -45,16 +45,16 @@ void FixedUpdate()
 
         anim.SetFloat("speed", Mathf.Abs(move));
 
-        move = Input.GetAxis("Horizontal"); //for using it with the computer keyboard
-        rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);//computer keyboard
+        //move = Input.GetAxis("Horizontal"); //for using it with the computer keyboard
+        //rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);//computer keyboard
         
 
 
-        //move = joystick.Horizontal * maxSpeed;
-        //rb.velocity = new Vector2(move, rb.velocity.y);
+        move = joystick.Horizontal * maxSpeed;
+        rb.velocity = new Vector2(move, rb.velocity.y);
         
 
-        Debug.Log(joystick.Horizontal);
+        //Debug.Log(joystick.Horizontal);
 
 
         //Fliping the player the right way
@@ -74,8 +74,8 @@ void FixedUpdate()
         }
 
         //Setting diferent levels of jumping, the more you hold the more you jump
-        if (Input.GetKey(KeyCode.Space) && isJumping == true) //desktop
-        //if (isPressed && isJumping == true) //mobile
+        //if (Input.GetKey(KeyCode.Space) && isJumping == true) //desktop
+        if (isPressed && isJumping == true) //mobile
             {
             if (jumpTimeCounter > 0)
             {
@@ -88,8 +88,8 @@ void FixedUpdate()
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space)) //desktop
-        //if (isPressed == false) //mobile
+        //if (Input.GetKeyUp(KeyCode.Space)) //desktop
+        if (isPressed == false) //mobile
         {
             isJumping = false;
         }
@@ -101,8 +101,8 @@ void FixedUpdate()
         if (other.gameObject.tag == "Ground") //checking if we're touching the ground
         {
             //allowing it to jump
-            if (Input.GetKeyDown(KeyCode.Space)) //desktop
-            //if (isPressed) //mobile
+            //if (Input.GetKeyDown(KeyCode.Space)) //desktop
+            if (isPressed) //mobile
             {
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
