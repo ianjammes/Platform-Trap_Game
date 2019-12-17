@@ -27,12 +27,17 @@ public class playerController : MonoBehaviour
 
     private Transform originalTransform;
 
+    public checkPoint cp;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        originalTransform = GetComponent<Transform>();
+
+        
 
         maxSpeed = 16.0f;
 
@@ -61,9 +66,15 @@ void FixedUpdate()
         }
 
         //Detecting if we fall and the game is over
-        if(rb.transform.position.y < -20)
+        if(rb.transform.position.y < -20 && cp.isTriggered == false)
         {
+
             SceneManager.LoadScene("ImpossibleGame"); //reload the scene
+        }
+        else if(rb.transform.position.y < -20 && cp.isTriggered == true)
+        {
+            SceneManager.LoadScene("ImpossibleGame");
+            originalTransform.position = cp.transform.position;
         }
 
         //Setting diferent levels of jumping, the more you hold the more you jump

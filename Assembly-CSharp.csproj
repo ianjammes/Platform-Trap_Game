@@ -67,6 +67,7 @@
     <Compile Include="Assets\src\ballBehaviour.cs" />
     <Compile Include="Assets\src\banana2.cs" />
     <Compile Include="Assets\src\bananaScript.cs" />
+    <Compile Include="Assets\src\checkPoint.cs" />
     <Compile Include="Assets\src\deathController.cs" />
     <Compile Include="Assets\src\detectPlayerOnRock.cs" />
     <Compile Include="Assets\src\enemyController.cs" />

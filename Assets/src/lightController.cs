@@ -18,4 +18,3 @@ public class lightController : MonoBehaviour
     }
 }
 
-//cam.cullingMask = -1; // -1 means "Everything"
