@@ -11,11 +11,6 @@ public class enemyController : MonoBehaviour
     private bool facingRight;
     [SerializeField] private Animator myAnim;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -42,7 +37,6 @@ public class enemyController : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             myAnim.SetBool("isDead", true);
-            //SceneManager.LoadScene("ImpossibleGame"); //reload the scene
         }
     }
 }

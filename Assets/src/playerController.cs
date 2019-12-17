@@ -27,8 +27,6 @@ public class playerController : MonoBehaviour
 
     private Transform originalTransform;
 
-    //Joystick
-    public Joystick joystick;
 
     // Start is called before the first frame update
     void Start()
@@ -45,16 +43,11 @@ void FixedUpdate()
 
         anim.SetFloat("speed", Mathf.Abs(move));
 
-        //move = Input.GetAxis("Horizontal"); //for using it with the computer keyboard
-        //rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);//computer keyboard
-        
+        move = Input.GetAxis("Horizontal"); //for using it with the computer keyboard
 
 
-        move = joystick.Horizontal * maxSpeed;
-        rb.velocity = new Vector2(move, rb.velocity.y);
-        
-
-        //Debug.Log(joystick.Horizontal);
+        rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
+       
 
 
         //Fliping the player the right way
@@ -128,6 +121,21 @@ void FixedUpdate()
         Vector3 characterScale = transform.localScale;
         characterScale.x *= -1;
         transform.localScale = characterScale;
+    }
+
+    public void walkingRight()
+    {
+        move = 1f;
+     }
+
+    public void walkingLeft()
+    {
+        move = -1f;
+    }
+
+    public void notWalking()
+    {
+        move = 0f;
     }
 
     public void jumping()
