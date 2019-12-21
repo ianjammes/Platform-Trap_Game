@@ -28,6 +28,8 @@ public class playerController : MonoBehaviour
 
     private Transform originalTransform;
 
+    private static int numberTimesLost = 5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +40,14 @@ public class playerController : MonoBehaviour
 
         checkPointManager _varLastCheckPoint = FindObjectOfType<checkPointManager>();
 
-        trans.position = _varLastCheckPoint.lastCheckpoint;
+        if(numberTimesLost == 1)
+        {
+            trans.position = _varLastCheckPoint.startPosition;
+        }
+        else
+        {
+            trans.position = _varLastCheckPoint.lastCheckpoint;
+        }
 
 
 
@@ -76,7 +85,15 @@ void FixedUpdate()
         if(rb.transform.position.y < -20)
         {
             SceneManager.LoadScene("ImpossibleGame"); //reload the scene
-            //trans.position = cpManager.lastCheckpoint.position;
+            if(numberTimesLost == 1)
+            {
+                numberTimesLost = 5;
+            }
+            else
+            {
+                numberTimesLost--;
+            }
+           // Debug.Log(numberTimesLost);
         }
 
         //Setting diferent levels of jumping, the more you hold the more you jump

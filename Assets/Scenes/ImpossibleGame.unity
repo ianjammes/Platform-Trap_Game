@@ -2806,6 +2806,7 @@ MonoBehaviour:
   cpManager: {fileID: 1132891160}
   lastCheckpoint: {x: -277, y: -9, z: 0}
   cp1: {fileID: 944021933}
+  startPosition: {x: -277, y: -9, z: 0}
 --- !u!4 &1132891161
 Transform:
   m_ObjectHideFlags: 0
