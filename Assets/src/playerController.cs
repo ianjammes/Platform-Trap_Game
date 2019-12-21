@@ -10,6 +10,7 @@ public class playerController : MonoBehaviour
 
     //movement variables
     public static float maxSpeed;
+    private Transform trans;
     private Rigidbody2D rb;
     private Animator anim;
     private bool facingRight;
@@ -27,20 +28,26 @@ public class playerController : MonoBehaviour
 
     private Transform originalTransform;
 
-    public checkPoint cp;
-
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        trans = GetComponent<Transform>();
         anim = GetComponent<Animator>();
-        originalTransform = GetComponent<Transform>();
 
-        
+        checkPointManager _varLastCheckPoint = FindObjectOfType<checkPointManager>();
+
+        trans.position = _varLastCheckPoint.lastCheckpoint;
+
+
+
+
+
+        //trans.position = cpManager.lastCheckpoint; //Position to reappear after death
+        //Debug.Log(cpManager.lastCheckpoint);
 
         maxSpeed = 16.0f;
-
 }
 
 void FixedUpdate()
@@ -66,15 +73,10 @@ void FixedUpdate()
         }
 
         //Detecting if we fall and the game is over
-        if(rb.transform.position.y < -20 && cp.isTriggered == false)
+        if(rb.transform.position.y < -20)
         {
-
             SceneManager.LoadScene("ImpossibleGame"); //reload the scene
-        }
-        else if(rb.transform.position.y < -20 && cp.isTriggered == true)
-        {
-            SceneManager.LoadScene("ImpossibleGame");
-            originalTransform.position = cp.transform.position;
+            //trans.position = cpManager.lastCheckpoint.position;
         }
 
         //Setting diferent levels of jumping, the more you hold the more you jump

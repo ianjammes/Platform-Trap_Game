@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class checkPoint : MonoBehaviour
 {
-
+    public GameObject checkPoint1;
     public bool isTriggered;
 
     void Awake()
     {
+        DontDestroyOnLoad(checkPoint1);
         isTriggered = false;
     }
 
