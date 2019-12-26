@@ -66,6 +66,7 @@
     <Compile Include="Assets\src\activeSlippery.cs" />
     <Compile Include="Assets\src\ballBehaviour.cs" />
     <Compile Include="Assets\src\banana2.cs" />
+    <Compile Include="Assets\src\banana3.cs" />
     <Compile Include="Assets\src\bananaScript.cs" />
     <Compile Include="Assets\src\checkPoint.cs" />
     <Compile Include="Assets\src\checkPointManager.cs" />
@@ -74,10 +75,13 @@
     <Compile Include="Assets\src\enemyController.cs" />
     <Compile Include="Assets\src\hiddenCube4.cs" />
     <Compile Include="Assets\src\hiddenCubeController.cs" />
+    <Compile Include="Assets\src\lifeLeftScript.cs" />
     <Compile Include="Assets\src\lightController.cs" />
     <Compile Include="Assets\src\lightsOn.cs" />
+    <Compile Include="Assets\src\pinxos.cs" />
     <Compile Include="Assets\src\playerController.cs" />
     <Compile Include="Assets\src\rotationPlatform.cs" />
+    <Compile Include="Assets\src\startGame.cs" />
     <Compile Include="Assets\src\wallBehaviour.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/ianja/Desktop/Courses/Git repo/Platform-Trap_Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

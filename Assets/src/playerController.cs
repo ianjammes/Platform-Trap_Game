@@ -28,7 +28,7 @@ public class playerController : MonoBehaviour
 
     private Transform originalTransform;
 
-    private static int numberTimesLost = 5;
+    private static int numberTimesLost = 6;
 
 
     // Start is called before the first frame update

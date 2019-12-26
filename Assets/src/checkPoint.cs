@@ -6,11 +6,11 @@ public class checkPoint : MonoBehaviour
 {
     public GameObject checkPoint1;
     public bool isTriggered;
-    private static int numberTimesLost = 5;
+    private static int numberTimesLost = 6;
+    public ParticleSystem checkpointParticles;
 
     void Start()
     {
-        //DontDestroyOnLoad(checkPoint1);
         isTriggered = false;
         if (numberTimesLost == 1)
         {
@@ -27,6 +27,7 @@ public class checkPoint : MonoBehaviour
         if (other.gameObject.tag == ("Player") && numberTimesLost>1)
         {
             isTriggered = true;
+            checkpointParticles.Play();
         }
         else
         {
