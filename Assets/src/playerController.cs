@@ -93,7 +93,6 @@ void FixedUpdate()
             {
                 numberTimesLost--;
             }
-           // Debug.Log(numberTimesLost);
         }
 
         //Setting diferent levels of jumping, the more you hold the more you jump

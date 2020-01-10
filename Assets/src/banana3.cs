@@ -8,8 +8,6 @@ public class banana3 : MonoBehaviour
     public GameObject pinxos;
     public GameObject banana;
 
-
-    // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
         banana2 _wallDown = FindObjectOfType<banana2>();

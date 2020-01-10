@@ -13,14 +13,14 @@ public class banana2 : MonoBehaviour
 
     private void Start()
     {
-        //bn = GetComponent<SpriteRenderer>();
+        bn = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            //bn.enabled = false;
+            bn.enabled = false;
             myAnim.SetBool("activateWall", true);
             pinxos.SetBool("activatePinxos", true);
 

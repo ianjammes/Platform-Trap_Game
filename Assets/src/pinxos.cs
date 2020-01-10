@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class pinxos : MonoBehaviour
 {
-    
+    [SerializeField] private Animator myAnim;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.tag == "Player")
+        {
+            myAnim.SetBool("isDead", true);
+        }
     }
 }
