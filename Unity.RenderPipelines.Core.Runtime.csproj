@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</ProjectGuid>
+    <ProjectGuid>{DF88BCE8-B64F-969D-3C39-F0C65EF04F6B}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.Analytics.DataPrivacy</AssemblyName>
+    <AssemblyName>Unity.RenderPipelines.Core.Runtime</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -619,9 +619,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\AssemblyInfo.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacy.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacyButton.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Common\CommandBufferPool.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Common\CommonStructs.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Common\XRGraphics.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Debugging\ProfilingSample.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Textures\MSAASamples.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Utilities\ColorUtils.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Utilities\CoreRenderPipelinePreferences.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Utilities\CoreUtils.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Utilities\HableCurve.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Utilities\HaltonSequence.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Utilities\XRUtils.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Volume\Volume.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Volume\VolumeComponent.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Volume\VolumeManager.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Volume\VolumeParameter.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Volume\VolumeProfile.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.core\Runtime\Volume\VolumeStack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.cinemachine\Editor\Resources\CMWaveform.compute" />

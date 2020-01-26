@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6E266C6-3D1F-28C8-9FEB-2A01E44DBF77}</ProjectGuid>
+    <ProjectGuid>{FCBD67EC-29CD-1CFA-DD5A-DE23C045E679}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Unity.Analytics.DataPrivacy</AssemblyName>
+    <AssemblyName>Unity.RenderPipelines.Lightweight.Runtime</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -619,9 +619,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\AssemblyInfo.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacy.cs" />
-    <Compile Include="Packages\com.unity.analytics\DataPrivacy\DataPrivacyButton.cs" />
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{DF88BCE8-B64F-969D-3C39-F0C65EF04F6B}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\CameraCaptureBridge.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Data\LightweightRenderPipelineAsset.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Data\LightweightRenderPipelineEditorResources.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ForwardLights.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ForwardRenderer.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ForwardRendererData.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\LightweightRenderPipeline.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\LightweightRenderPipelineCore.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\LWRPAdditionalCameraData.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\LWRPAdditionalLightData.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\AdditionalLightsShadowCasterPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\CapturePass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\CopyColorPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\CopyDepthPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\DepthOnlyPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\DrawSkyboxPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\FinalBlitPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\MainLightShadowCasterPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\PostProcessPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\RenderOpaqueForwardPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\RenderTransparentForwardPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\SceneViewDepthCopy.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\ScreenSpaceShadowResolvePass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\Passes\ScriptableRenderPass.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\RenderingUtils.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\RenderTargetHandle.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\SampleCount.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\SceneViewDrawMode.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ScriptableRenderer.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ScriptableRendererData.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ScriptableRendererFeature.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ShaderUtils.cs" />
+    <Compile Include="Packages\com.unity.render-pipelines.lightweight\Runtime\ShadowUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.cinemachine\Editor\Resources\CMWaveform.compute" />
